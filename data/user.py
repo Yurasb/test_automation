@@ -5,7 +5,6 @@ import string
 
 
 class User(object):
-
     def __init__(self):
         self.first_name = 'First Name'
         self.last_name = 'Last Name'
@@ -20,6 +19,6 @@ class User(object):
         self.username = random_string()
         self.email = random_string() + '@mail.com'
         self.description = 'About me'
-        self.image = 'Upload_image.jpg'
+        self.image = '../data/Upload_image.jpg'
         self.password = 'password'
         self.confirm_password = 'password'
