@@ -1,0 +1,98 @@
+{"_default": {
+  "pass": {
+    "valid_user": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "phone": "3751234567",
+      "username": "valid",
+      "email": "valid",
+      "password": "password",
+      "confirm_password": "password"
+    }
+  },
+  "fail": {
+    "username_exist": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "phone": "3751234567",
+      "username": "username",
+      "email": "valid",
+      "password": "password",
+      "confirm_password": "password"
+    },
+    "email_exist": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "phone": "3751234567",
+      "username": "valid",
+      "email": "test@mail.com",
+      "password": "password",
+      "confirm_password": "password"
+    },
+    "pairwise": {
+      "set1": {
+        "first_name": "",
+        "last_name": "Last Name",
+        "phone":  "",
+        "username": "valid",
+        "email": "valid",
+        "password": "",
+        "confirm_password": "fail"
+      },
+      "set2": {
+        "first_name": "First Name",
+        "last_name": "",
+        "phone": "3751234567",
+        "username": "username",
+        "email": "test@mail.com",
+        "password": "fail",
+        "confirm_password": "fail"
+      },
+      "set3": {
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "phone": "fail",
+        "username": "",
+        "email": "valid",
+        "password": "password",
+        "confirm_password": "password"
+      },
+      "set4": {
+        "first_name": "",
+        "last_name": "",
+        "phone": "3751234567",
+        "username": "",
+        "email": "test@mail.com",
+        "password": "",
+        "confirm_password": ""
+    },
+      "set5": {
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "phone": "",
+        "username": "username",
+        "email": "fail",
+        "password": "fail",
+        "confirm_password": ""
+      },
+      "set6": {
+        "first_name": "",
+        "last_name": "",
+        "phone": "fail",
+        "username": "valid",
+        "email": "fail",
+        "password": "password",
+        "confirm_password": "fail"
+      },
+      "set7": {
+        "first_name": "First Name",
+        "last_name": "",
+        "phone": "",
+        "username": "valid",
+        "email": "",
+        "password": "",
+        "confirm_password": ""
+      }
+    }
+  }
+}}
