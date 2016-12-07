@@ -9,6 +9,7 @@ import webium.settings
 from data.user import User
 from pages.drag_and_drop import DraganddropPage
 from pages.registration import RegistrationPage
+from pages.top_menu import TopMenu
 
 
 @pytest.fixture(scope='session')
@@ -24,6 +25,11 @@ def user():
 @pytest.fixture(scope='session')
 def dnd_page():
     return DraganddropPage()
+
+
+@pytest.fixture(scope='session')
+def top_menu():
+    return TopMenu()
 
 
 @pytest.fixture(scope='session', autouse=True)
