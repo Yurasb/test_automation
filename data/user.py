@@ -19,6 +19,6 @@ class User(object):
         self.username = random_string()
         self.email = random_string() + '@mail.com'
         self.description = 'About me'
-        self.image = '../data/Upload_image.jpg'
+        self.image = '../data/upload_image.jpg'
         self.password = 'password'
         self.confirm_password = 'password'
