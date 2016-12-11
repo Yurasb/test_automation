@@ -1,6 +1,6 @@
-{"_default": {
-  "pass": {
-    "valid_user": {
+{
+  "_default": {
+    "0": {
       "first_name": "First Name",
       "last_name": "Last Name",
       "phone": "3751234567",
@@ -8,10 +8,8 @@
       "email": "valid",
       "password": "password",
       "confirm_password": "password"
-    }
-  },
-  "fail": {
-    "username_exist": {
+    },
+    "1": {
       "first_name": "First Name",
       "last_name": "Last Name",
       "phone": "3751234567",
@@ -20,7 +18,7 @@
       "password": "password",
       "confirm_password": "password"
     },
-    "email_exist": {
+    "2": {
       "first_name": "First Name",
       "last_name": "Last Name",
       "phone": "3751234567",
@@ -29,70 +27,68 @@
       "password": "password",
       "confirm_password": "password"
     },
-    "pairwise": {
-      "set1": {
-        "first_name": "",
-        "last_name": "Last Name",
-        "phone":  "",
-        "username": "valid",
-        "email": "valid",
-        "password": "",
-        "confirm_password": "fail"
-      },
-      "set2": {
-        "first_name": "First Name",
-        "last_name": "",
-        "phone": "3751234567",
-        "username": "username",
-        "email": "test@mail.com",
-        "password": "fail",
-        "confirm_password": "fail"
-      },
-      "set3": {
-        "first_name": "First Name",
-        "last_name": "Last Name",
-        "phone": "fail",
-        "username": "",
-        "email": "valid",
-        "password": "password",
-        "confirm_password": "password"
-      },
-      "set4": {
-        "first_name": "",
-        "last_name": "",
-        "phone": "3751234567",
-        "username": "",
-        "email": "test@mail.com",
-        "password": "",
-        "confirm_password": ""
+    "3": {
+      "first_name": "",
+      "last_name": "Last Name",
+      "phone": "",
+      "username": "valid",
+      "email": "valid",
+      "password": "",
+      "confirm_password": "fail"
     },
-      "set5": {
-        "first_name": "First Name",
-        "last_name": "Last Name",
-        "phone": "",
-        "username": "username",
-        "email": "fail",
-        "password": "fail",
-        "confirm_password": ""
-      },
-      "set6": {
-        "first_name": "",
-        "last_name": "",
-        "phone": "fail",
-        "username": "valid",
-        "email": "fail",
-        "password": "password",
-        "confirm_password": "fail"
-      },
-      "set7": {
-        "first_name": "First Name",
-        "last_name": "",
-        "phone": "",
-        "username": "valid",
-        "email": "",
-        "password": "",
-        "confirm_password": ""
-      }
+    "4": {
+      "first_name": "First Name",
+      "last_name": "",
+      "phone": "3751234567",
+      "username": "username",
+      "email": "test@mail.com",
+      "password": "fail",
+      "confirm_password": "fail"
+    },
+    "5": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "phone": "fail",
+      "username": "",
+      "email": "valid",
+      "password": "password",
+      "confirm_password": "password"
+    },
+    "6": {
+      "first_name": "",
+      "last_name": "",
+      "phone": "3751234567",
+      "username": "",
+      "email": "test@mail.com",
+      "password": "",
+      "confirm_password": ""
+    },
+    "7": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "phone": "",
+      "username": "username",
+      "email": "fail",
+      "password": "fail",
+      "confirm_password": ""
+    },
+    "8": {
+      "first_name": "",
+      "last_name": "",
+      "phone": "fail",
+      "username": "valid",
+      "email": "fail",
+      "password": "password",
+      "confirm_password": "fail"
+    },
+    "9": {
+      "first_name": "First Name",
+      "last_name": "",
+      "phone": "",
+      "username": "valid",
+      "email": "",
+      "password": "",
+      "confirm_password": ""
     }
   }
-}}
+}
