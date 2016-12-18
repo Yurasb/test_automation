@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from tinydb import TinyDB
 
 from data.user import User
