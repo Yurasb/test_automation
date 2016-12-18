@@ -1,0 +1,83 @@
+{
+  "valid_user_data": {
+    "0": {
+      "first_name": "First Name",
+      "phone": "3751234567",
+      "password": "password",
+      "last_name": "Last Name",
+      "confirm_password": "password"
+    },
+    "1": {
+      "first_name": "First Name",
+      "phone": "3751234567",
+      "password": "weak_passwor",
+      "last_name": "Last Name",
+      "confirm_password": "weak_passwor"
+    },
+    "2": {
+      "first_name": "First Name",
+      "phone": "3751234567",
+      "password": "med1um_p@ssw0",
+      "last_name": "Last Name",
+      "confirm_password": "med1um_p@ssw0"
+    },
+    "3": {
+      "first_name": "First Name",
+      "phone": "3751234567",
+      "password": "Str0ng_bl@_bl@",
+      "last_name": "Last Name",
+      "confirm_password": "Str0ng_bl@_bl@"
+    }
+  },
+  "invalid_user_data": {
+    "0": {
+      "first_name": "",
+      "phone": "",
+      "password": "",
+      "last_name": "Last Name",
+      "confirm_password": "fail"
+    },
+    "1": {
+      "first_name": "First Name",
+      "phone": "3751234567",
+      "password": "fail",
+      "last_name": "",
+      "confirm_password": "fail"
+    },
+    "2": {
+      "first_name": "First Name",
+      "confirm_password": "password",
+      "password": "password",
+      "last_name": "Last Name",
+      "phone": "fail"
+    },
+    "3": {
+      "first_name": "",
+      "phone": "3751234567",
+      "password": "",
+      "last_name": "",
+      "confirm_password": ""
+    },
+    "4": {
+      "first_name": "First Name",
+      "phone": "",
+      "password": "fail",
+      "last_name": "Last Name",
+      "confirm_password": ""
+    },
+    "5": {
+      "first_name": "",
+      "phone": "fail",
+      "password": "password",
+      "last_name": "",
+      "confirm_password": "fail"
+    },
+    "6": {
+      "first_name": "First Name",
+      "phone": "",
+      "password": "",
+      "last_name": "",
+      "confirm_password": ""
+    }
+  }
+}

@@ -1,24 +1,20 @@
 # -*- coding: utf-8 -*-
-
-import random
-import string
+import utils
 
 
 class User(object):
-    def __init__(self):
-        self.first_name = 'First Name'
-        self.last_name = 'Last Name'
-        self.phone = '3751234567'
-
-        def random_string():
-            return ''.join(
-                random.choice(string.ascii_uppercase +
-                              string.digits) for _ in range(7)
-            )
-
-        self.username = random_string()
-        self.email = random_string() + '@mail.com'
+    def __init__(
+            self, first_name, last_name, phone, password,
+            confirm_password
+    ):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.phone = phone
+        self.username = utils.random_string()
+        self.email = '{0}@mail.com'.format(
+            utils.random_string()
+        )
         self.description = 'About me'
-        self.image = '../data/upload_image.jpg'
-        self.password = 'password'
-        self.confirm_password = 'password'
+        self.image = 'Upload_image.jpg'
+        self.password = password
+        self.confirm_password = confirm_password
