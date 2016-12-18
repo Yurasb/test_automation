@@ -11,7 +11,9 @@ class User(object):
         self.last_name = last_name
         self.phone = phone
         self.username = utils.random_string()
-        self.email = utils.random_string() + '@mail.com'
+        self.email = '{0}@mail.com'.format(
+            utils.random_string()
+        )
         self.description = 'About me'
         self.image = 'Upload_image.jpg'
         self.password = password

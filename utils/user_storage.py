@@ -11,15 +11,6 @@ user_db = TinyDB(
 )
 
 
-class Collection(object):
-    VALID = user_db.table(name='valid_user_data')
-
-
-def get_user_by(collection, index):
-    return User(
-        first_name=collection.get(eid=index)['first_name'],
-        last_name=collection.get(eid=index)['last_name'],
-        phone=collection.get(eid=index)['phone'],
-        password=collection.get(eid=index)['password'],
-        confirm_password=collection.get(eid=index)['confirm_password']
-    )
+def get_user_by(index):
+    user_data = user_db.get(eid=index)
+    return User(**user_data)
