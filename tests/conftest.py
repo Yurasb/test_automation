@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-
+import webium.settings
 from selenium import webdriver
 from webium.driver import close_driver
-import webium.settings
 
 from data.user import User
+from pages.home_page import HomePage
 from pages.drag_and_drop import DraganddropPage
 from pages.registration import RegistrationPage
-from pages.top_menu import TopMenu
 
 
 @pytest.fixture(scope='session')
@@ -29,7 +28,7 @@ def dnd_page():
 
 @pytest.fixture(scope='session')
 def top_menu():
-    return TopMenu()
+    return HomePage()
 
 
 @pytest.fixture(scope='session', autouse=True)

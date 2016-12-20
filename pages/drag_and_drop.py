@@ -2,12 +2,14 @@
 
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
-from webium import BasePage, Find
+from webium import Find
+
+from pages.home_page import HomePage
 
 
-class DraganddropPage(BasePage):
+class DraganddropPage(HomePage):
     def __init__(self):
-        super(DraganddropPage, self).__init__(
+        super(HomePage, self).__init__(
             url='http://demoqa.com/droppable/'
         )
 
