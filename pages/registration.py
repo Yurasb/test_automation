@@ -66,6 +66,10 @@ class RegistrationPage(BasePage):
     registration_message = Find(
         by=By.CLASS_NAME, value='piereg_message'
     )
+    fail_message = Find(
+        by=By.XPATH,
+        value='//div[@class=\'fieldset error\']'
+    )
 
     def register_user(self, data):
         self.first_name_input.send_keys(data.first_name)
@@ -90,3 +94,6 @@ class RegistrationPage(BasePage):
     def is_registration_success(self):
         return self.registration_message.text == ('Thank you'
                                                   ' for your registration')
+
+    def is_registration_failed(self):
+        return self.is_element_present('fail_message')

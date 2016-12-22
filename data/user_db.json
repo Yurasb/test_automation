@@ -32,51 +32,51 @@
   "invalid_user_data": {
     "0": {
       "first_name": "",
-      "phone": "",
-      "password": "",
+      "phone": "3751234567",
+      "password": "password",
       "last_name": "Last Name",
-      "confirm_password": "fail"
+      "confirm_password": "password"
     },
     "1": {
       "first_name": "First Name",
       "phone": "3751234567",
-      "password": "fail",
+      "password": "password",
       "last_name": "",
-      "confirm_password": "fail"
+      "confirm_password": "password"
     },
     "2": {
       "first_name": "First Name",
       "confirm_password": "password",
       "password": "password",
       "last_name": "Last Name",
-      "phone": "fail"
+      "phone": ""
     },
     "3": {
-      "first_name": "",
-      "phone": "3751234567",
-      "password": "",
-      "last_name": "",
-      "confirm_password": ""
+      "first_name": "First Name",
+      "phone": "fail",
+      "password": "password",
+      "last_name": "Last Name",
+      "confirm_password": "password"
     },
     "4": {
       "first_name": "First Name",
-      "phone": "",
-      "password": "fail",
+      "phone": "3751234567",
+      "password": "",
+      "last_name": "Last Name",
+      "confirm_password": "password"
+    },
+    "5": {
+      "first_name": "First Name",
+      "phone": "3751234567",
+      "password": "password",
       "last_name": "Last Name",
       "confirm_password": ""
     },
-    "5": {
-      "first_name": "",
-      "phone": "fail",
-      "password": "password",
-      "last_name": "",
-      "confirm_password": "fail"
-    },
     "6": {
       "first_name": "First Name",
-      "phone": "",
+      "phone": "3751234567",
       "password": "",
-      "last_name": "",
+      "last_name": "Last Name",
       "confirm_password": ""
     }
   }
