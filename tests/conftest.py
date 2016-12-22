@@ -27,7 +27,7 @@ def dnd_page():
 
 
 @pytest.fixture(scope='session')
-def top_menu():
+def home_page():
     return HomePage()
 
 

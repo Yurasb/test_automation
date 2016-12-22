@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webelement import WebElement
 from webium import BasePage, Find
 
 
-class TopMenu(object):
+class TopMenu(WebElement):
     logo_a = Find(by=By.CLASS_NAME, value='site-anchor')
     home_a = Find(by=By.LINK_TEXT, value='Home')
     about_us_a = Find(by=By.LINK_TEXT, value='About us')
@@ -20,7 +21,7 @@ class TopMenu(object):
     contact_a = Find(by=By.LINK_TEXT, value='Contact')
 
 
-class SideMenu(object):
+class SideMenu(WebElement):
     registration_a = Find(
         by=By.LINK_TEXT, value='Registration'
     )
@@ -54,8 +55,10 @@ class SideMenu(object):
 
 
 class HomePage(BasePage):
-    top_menu = Find(TopMenu)
-    side_menu = Find(SideMenu)
+    top_menu = Find(
+        TopMenu, By.CSS_SELECTOR, 'div.collapse'
+    )
+    side_menu = Find(SideMenu, By.ID, 'secondary')
 
     def __init__(self):
         super(HomePage, self).__init__(

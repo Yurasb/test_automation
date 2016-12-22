@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-def test_demo_link(top_menu):
-    top_menu.open()
-    assert top_menu.is_demo_dropdown_valid()
+def test_demo_link(home_page):
+    home_page.open()
+    assert home_page.is_demo_dropdown_valid()
