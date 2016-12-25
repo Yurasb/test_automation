@@ -5,9 +5,8 @@ import webium.settings
 from selenium import webdriver
 from webium.driver import close_driver
 
-from data.user import User
-from pages.home_page import HomePage
 from pages.drag_and_drop import DraganddropPage
+from pages.home_page import HomePage
 from pages.registration import RegistrationPage
 from utils.user_storage import get_valid_user_by, get_invalid_user_by
 
