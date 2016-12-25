@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
 from selenium.webdriver.common.by import By
-from webium import BasePage, Find
+from webium import Find
+
+from pages.home_page import HomePage
 
 
-class RegistrationPage(BasePage):
+class RegistrationPage(HomePage):
     def __init__(self):
-        super(RegistrationPage, self).__init__(
+        super(HomePage, self).__init__(
             url='http://www.demoqa.com/registration/'
         )
 
