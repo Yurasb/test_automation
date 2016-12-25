@@ -67,7 +67,8 @@ class HomePage(BasePage):
 
     def is_demo_dropdown_valid(self):
         self.top_menu.demo_li.click()
-        return\
-            self.top_menu.is_element_present('draggable_a')\
-            and\
+        return (
+            self.top_menu.is_element_present('draggable_a')
+            and
             self.top_menu.is_element_present('tabs_a')
+        )
