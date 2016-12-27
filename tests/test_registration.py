@@ -7,7 +7,8 @@ import allure
 def test_register_user(reg_page, valid_user):
     reg_page.open()
     reg_page.register_user(valid_user)
-    assert reg_page.is_registration_success()
+    assert reg_page.is_registration_success(), ('User is not'
+                                                ' registered or no confirmation')
 
 
 @allure.feature('Registration')
@@ -15,4 +16,5 @@ def test_register_user(reg_page, valid_user):
 def test_not_register_user(reg_page, invalid_user):
     reg_page.open()
     reg_page.register_user(invalid_user)
-    assert reg_page.is_registration_failed()
+    assert reg_page.is_registration_failed(), ('No error'
+                                               ' message or user registered')
