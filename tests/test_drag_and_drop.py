@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
+import allure
 
 
+@allure.feature('Drag and drop')
+@allure.story('Simple drag and drop')
 def test_drag_and_drop(dnd_page):
     dnd_page.open()
     dnd_page.drag_and_drop(dnd_page.drag_div,
