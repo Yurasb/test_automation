@@ -38,21 +38,21 @@ def home_page():
 
 @pytest.fixture(scope='session', autouse=True)
 def setup_webdriver(request):
-    def sauce_lab():
-        desired_cap = {
-            'platform': "Windows 7",
-            'browserName': "firefox",
-            'version': "47",
-        }
-    
-        driver = webdriver.Remote(
-            command_executor=('http://Sausage:Party'
-                              '@ondemand.saucelabs.com:80/wd/hub'),
-            desired_capabilities=desired_cap)
-    
-        return driver
-    
-    webium.settings.driver_class = sauce_lab
+    # def sauce_lab():
+    #     desired_cap = {
+    #         'platform': "Windows 7",
+    #         'browserName': "firefox",
+    #         'version': "47",
+    #     }
+    #
+    #     driver = webdriver.Remote(
+    #         command_executor=('http://Sausage:Party'
+    #                           '@ondemand.saucelabs.com:80/wd/hub'),
+    #         desired_capabilities=desired_cap)
+    #
+    #     return driver
+    #
+    # webium.settings.driver_class = sauce_lab
 
     def fin():
         close_driver()

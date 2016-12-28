@@ -99,3 +99,6 @@ class RegistrationPage(HomePage):
 
     def is_registration_failed(self):
         return self.is_element_present('fail_message')
+
+    def __repr__(self):
+        return self.__class__.__name__
