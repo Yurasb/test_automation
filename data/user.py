@@ -18,3 +18,24 @@ class User(object):
         self.image = 'Upload_image.jpg'
         self.password = password
         self.confirm_password = confirm_password
+
+    def __str__(self):
+        return (
+            'User[firstname={first_name},'
+            ' lastname={last_name},'
+            ' phone={phone},'
+            ' username={username},'
+            ' email={email},'
+            ' description={description},'
+            ' password={password},'
+            ' confirm password={confirm_password}]'.format(
+                first_name=self.first_name,
+                last_name=self.last_name,
+                phone=self.phone,
+                username=self.username,
+                email=self.email,
+                description=self.description,
+                password=self.password,
+                confirm_password=self.confirm_password
+            )
+        )
