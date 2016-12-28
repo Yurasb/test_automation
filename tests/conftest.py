@@ -48,7 +48,8 @@ def setup_webdriver(request):
         driver = webdriver.Remote(
             command_executor=('http://Sausage:Party'
                               '@ondemand.saucelabs.com:80/wd/hub'),
-            desired_capabilities=desired_cap)
+            desired_capabilities=desired_cap
+        )
 
         return driver
 
