@@ -44,15 +44,15 @@ def setup_webdriver(request):
             'browserName': "firefox",
             'version': "47",
         }
-    
+
         driver = webdriver.Remote(
             command_executor=('http://Sausage:Party'
                               '@ondemand.saucelabs.com:80/wd/hub'),
             desired_capabilities=desired_cap
         )
-    
+
         return driver
-    
+
     webium.settings.driver_class = sauce_lab
 
     def fin():

@@ -26,3 +26,6 @@ class DraganddropPage(HomePage):
 
     def is_drag_and_drop_success(self):
         return self.dropped_message.text == 'Dropped!'
+
+    def __repr__(self):
+        return self.__class__.__name__

@@ -72,3 +72,9 @@ class HomePage(BasePage):
             and
             self.top_menu.is_element_present('tabs_a')
         )
+
+    def is_page_name_expected(self):
+        return self._driver.title == 'This test should fail'
+
+    def __repr__(self):
+        return self.__class__.__name__
