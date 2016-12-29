@@ -20,44 +20,6 @@ def pytest_runtest_makereport(item, call, __multicall__):
     return rep
 
 
-@pytest.fixture(scope='session')
-def reg_page():
-    return RegistrationPage()
-
-
-@pytest.fixture(scope='session', params=range(4))
-def valid_user(request):
-    return get_valid_user_by(request.param)
-
-
-@pytest.fixture(scope='session', params=range(7))
-def invalid_user(request):
-    return get_invalid_user_by(request.param)
-
-
-@pytest.fixture(scope='session')
-def dnd_page():
-    return DraganddropPage()
-
-
-@pytest.fixture(scope='session')
-def home_page():
-    return HomePage()
-
-
-@pytest.fixture(autouse=True)
-def screenshot_on_fail(request):
-    def fin():
-        if request.node.rep_call.failed:
-            allure.attach(
-                request.node.name,
-                get_driver_no_init().get_screenshot_as_png(),
-                type=AttachmentType.PNG
-            )
-
-    request.addfinalizer(fin)
-
-
 @pytest.fixture(scope='session', autouse=True)
 def setup_webdriver(request):
     def sauce_lab():
@@ -81,3 +43,41 @@ def setup_webdriver(request):
         close_driver()
 
     request.addfinalizer(fin)
+
+
+@pytest.fixture(autouse=True)
+def screenshot_on_fail(request):
+    def fin():
+        if request.node.rep_call.failed:
+            allure.attach(
+                request.node.name,
+                get_driver_no_init().get_screenshot_as_png(),
+                type=AttachmentType.PNG
+            )
+
+    request.addfinalizer(fin)
+
+
+@pytest.fixture(scope='session')
+def home_page():
+    return HomePage()
+
+
+@pytest.fixture(scope='session')
+def reg_page():
+    return RegistrationPage()
+
+
+@pytest.fixture(scope='session')
+def dnd_page():
+    return DraganddropPage()
+
+
+@pytest.fixture(scope='session', params=range(4))
+def valid_user(request):
+    return get_valid_user_by(request.param)
+
+
+@pytest.fixture(scope='session', params=range(7))
+def invalid_user(request):
+    return get_invalid_user_by(request.param)
