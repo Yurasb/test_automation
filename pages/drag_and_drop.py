@@ -13,16 +13,20 @@ class DraganddropPage(HomePage):
             url='http://demoqa.com/droppable/'
         )
 
-    drag_div = Find(by=By.XPATH,
-                    value='//div[@id=\'draggableview\']')
-    drop_div = Find(by=By.XPATH,
-                    value='//div[@id=\'droppableview\']')
-    dropped_message = Find(by=By.XPATH,
-                           value='//div[@id=\'droppableview\']/p')
+    drag_div = Find(
+        by=By.XPATH, value='//div[@id=\'draggableview\']'
+    )
+    drop_div = Find(
+        by=By.XPATH, value='//div[@id=\'droppableview\']'
+    )
+    dropped_message = Find(
+        by=By.XPATH, value='//div[@id=\'droppableview\']/p'
+    )
 
     def drag_and_drop(self, drag, drop):
-        ActionChains(self._driver).drag_and_drop(drag,
-                                                 drop).perform()
+        ActionChains(self._driver).drag_and_drop(
+            drag, drop
+        ).perform()
 
     def is_drag_and_drop_success(self):
         return self.dropped_message.text == 'Dropped!'
