@@ -1,7 +1,9 @@
-# -*- coding: utf-8 -*-
+# !/usr/bin/python
 
-import yaml
+import sys
 
+import pytest
 
-with open('../config.yaml', 'r') as stream:
-    configuration = yaml.load(stream)
+configuration = [sys.argv[1], sys.argv[2]]
+
+pytest.main(['./tests/', '--alluredir=./report/'])

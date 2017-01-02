@@ -26,17 +26,14 @@ def setup_webdriver(request):
     def sauce_lab():
         desired_cap = {
             'platform': 'Windows 7',
-            'browserName': configuration['browser'],
-            'version': configuration['version']
+            'browserName': configuration[0],
+            'version': configuration[1]
         }
 
         driver = webdriver.Remote(
             command_executor=(
-                'http://{username}:{access_key}'
+                'http://Sausage:Party'
                 '@ondemand.saucelabs.com:80/wd/hub'
-            ).format(
-                username=configuration['username'],
-                access_key=configuration['access_key']
             ),
             desired_capabilities=desired_cap
         )

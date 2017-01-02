@@ -8,7 +8,7 @@ VALID = 'valid_user_data'
 INVALID = 'invalid_user_data'
 
 user_db = TinyDB(
-    '../data/user_db.json',
+    './data/user_db.json',
     default_table=VALID
 )
 
@@ -34,7 +34,7 @@ class User(object):
         self.username = random_string()
         self.email = '{0}@mail.com'.format(random_string())
         self.description = 'About me'
-        self.image = '../data/upload_image.jpg'
+        self.image = './data/upload_image.jpg'
         self.password = password
         self.confirm_password = confirm_password
 
