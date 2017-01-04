@@ -13,7 +13,6 @@ selenium==2.53.6
 setuptools==32.3.0
 six==1.10.0
 tinydb==3.2.1
-virtualenv==15.1.0
 waiting==1.4.0
 webium==1.2.0
 wheel==0.30.0a0
