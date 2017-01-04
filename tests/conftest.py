@@ -11,7 +11,7 @@ from main import configuration
 from pages.drag_and_drop import DraganddropPage
 from pages.home_page import HomePage
 from pages.registration import RegistrationPage
-from utils.user_storage import get_valid_user_by, get_invalid_user_by
+from user.user_storage import get_valid_user_by, get_invalid_user_by
 
 
 @pytest.mark.tryfirst

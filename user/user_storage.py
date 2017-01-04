@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from tinydb import TinyDB
 
-from utils import random_string
+from user import random_string
 
 
 VALID = 'valid_user_data'
