@@ -7,10 +7,11 @@ from selenium import webdriver
 from webium.driver import close_driver, get_driver_no_init
 from allure.constants import AttachmentType
 
+from main import configuration
 from pages.drag_and_drop import DraganddropPage
 from pages.home_page import HomePage
 from pages.registration import RegistrationPage
-from utils.user_storage import get_valid_user_by, get_invalid_user_by
+from user.user_storage import get_valid_user_by, get_invalid_user_by
 
 
 @pytest.mark.tryfirst
@@ -24,14 +25,19 @@ def pytest_runtest_makereport(item, call, __multicall__):
 def setup_webdriver(request):
     def sauce_lab():
         desired_cap = {
-            'platform': "Windows 7",
-            'browserName': "firefox",
-            'version': "47",
+            'platform': configuration['platform'],
+            'browserName': configuration['browser'],
+            'version': configuration['version']
         }
 
         driver = webdriver.Remote(
-            command_executor=('http://Sausage:Party'
-                              '@ondemand.saucelabs.com:80/wd/hub'),
+            command_executor=(
+                'http://{username}:{access_key}'
+                '@ondemand.saucelabs.com:80/wd/hub'
+            ).format(
+                username=configuration['username'],
+                access_key=configuration['access_key']
+            ),
             desired_capabilities=desired_cap
         )
 
