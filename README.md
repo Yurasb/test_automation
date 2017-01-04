@@ -5,7 +5,7 @@ This is my task for test automation
 Project is optimized for running on Unix systems. Please, use virtual machine if it's needed.
 
 ### preparation
-At first, install needed libs: `pip`, `virtualenv` and `Allure CLI`:
+At first, install needed libs -`pip`, `virtualenv` and `Allure CLI`:
 > sudo apt-get install python-pip
 
 > sudo apt-get update
