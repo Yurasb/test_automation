@@ -25,15 +25,18 @@ def pytest_runtest_makereport(item, call, __multicall__):
 def setup_webdriver(request):
     def sauce_lab():
         desired_cap = {
-            'platform': 'Windows 7',
-            'browserName': configuration[0],
-            'version': configuration[1]
+            'platform': configuration['platform'],
+            'browserName': configuration['browser'],
+            'version': configuration['version']
         }
 
         driver = webdriver.Remote(
             command_executor=(
-                'http://Sausage:Party'
+                'http://{username}:{access_key}'
                 '@ondemand.saucelabs.com:80/wd/hub'
+            ).format(
+                username=configuration['username'],
+                access_key=configuration['access_key']
             ),
             desired_capabilities=desired_cap
         )

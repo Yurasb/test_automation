@@ -1,9 +1,9 @@
-# !/usr/bin/python
-
-import sys
-
+# -*- coding: utf-8 -*-
 import pytest
+import yaml
 
-configuration = [sys.argv[1], sys.argv[2]]
 
-pytest.main(['./tests/', '--alluredir=./report/'])
+with open('./config.yaml', 'r') as stream:
+    configuration = yaml.load(stream)
+
+pytest.main(['./tests/',  '--alluredir=./allure-report/'])
