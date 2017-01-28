@@ -4,16 +4,13 @@ enum34==1.1.6
 future==0.16.0
 lxml==3.7.1
 namedlist==1.7
-pip==9.0.1
 pluggy==0.4.0
 py==1.4.32
 pytest==2.9.0
 pytest-allure-adaptor==1.7.6
 selenium==2.53.6
-setuptools==32.3.0
 six==1.10.0
 tinydb==3.2.1
 waiting==1.4.0
 webium==1.2.0
-wheel==0.30.0a0
 wsgiref==0.1.2

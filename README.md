@@ -2,7 +2,7 @@
 This is my task for test automation
 
 ### requirements
-Project is optimized for running on Unix systems. Please, use virtual machine if it's needed.
+Project is optimized for running on Ubuntu 14.04. Please, use virtual machine if it's needed.
 
 ### preparation
 At first, install needed libs -`pip`, `virtualenv` and `Allure CLI`:
@@ -32,8 +32,17 @@ You could use [Saucelabs Platform Configurator] (https://wiki.saucelabs.com/disp
 
 Fill out `username` and `access_key` fields with provided Saucelabs username and access key.
 
-### running
+### running with makefile
 From root directory of the project run:
 > make all
 
 This will prepare virtualenv, install needed packages, run tests, generate report and open it.
+
+### running with tox
+To run with `tox` you may need to install it at first:
+> sudo pip install tox
+
+After installation from the root directory of the project run:
+> tox
+
+This will prepare virtualenv in *.tox* directory, run tests, generate report and open it.
