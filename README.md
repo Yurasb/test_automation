@@ -18,6 +18,9 @@ At first, install needed libs -`pip`, `virtualenv` and `Allure CLI`:
 
  > sudo apt-get install allure-commandline
 
+ If you want to run tests with `tox` you may need to install it at first:
+> sudo pip install tox
+
 ### configuration
 Open config.yaml and add platform, browser and its version, e.g.:
 > platform:  Windows 7
@@ -39,8 +42,7 @@ From root directory of the project run:
 This will prepare virtualenv, install needed packages, run tests, generate report and open it.
 
 ### running with tox
-To run with `tox` you may need to install it at first:
-> sudo pip install tox
+
 
 After installation from the root directory of the project run:
 > tox
